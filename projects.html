@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<title>PROJECTS</title>
+
+	</head>
+	<body>
+		<div class="header">
+			<h1 >
+				PROJECTS
+			</h1>
+		</div>
+		<div class="sitenav">
+			<a class="sitenav" href="about.html">About</a> | 
+			<a class="sitenav" href="projects.html">Projects</a> | 
+			<a class="sitenav" href="classes.html">Classes</a>
+			<hr>
+		</div>
+		<div class="content">
+			<h2 class="proj_section">Hardware (and Software)</h2>
+			<h3 class="proj_header">Fenrir</h3>
+			<h3 class="proj_header">Goliath</h3>
+			<h3 class="proj_header">ITR Lab Door Monitoring</h3>
+			<h3 class="proj_header">Arc Reactor</h3>
+			<h3 class="proj_header">Third Deck Alarm</h3>
+			<p class="content">
+			During my Junior year, I joined a fraternity on campus, &Phi;&Kappa;&Sigma;, or the "Skulls." Like many fraternities, we have some traditions and historic rivalries. One of those is the eternal war between the glorious armies of Third Deck, and the lowly peasants of Second Deck. The floors of the fraternity house are internally referred to as "decks," supposedly because of a Navy ex-serviceman influence in the years after WWII. There are two residential floor of the fraternity, the second, and the third. The members of the (superior) Third Deck, feel that their floor is "best deck" and often wish to remove Second Deck intruders from the deck.
+			</p>
+			<p class="content">
+			The Third Deckers are rallied by the Third Deck alarm. When I moved in during my pledge semester, the Third Deck Alarm was an MP3 of a submarine's dive horn. The guy at the end of the hall would switch on his extra set of speakers and blare the siren down the hall. This was moderately effective, but an improvement could be engineered. There were two main problems with the MP3 + speaker based third deck alarm: volume and control. Speakers can only get so loud, and they might not be effective through closed doors. Also, the only person who could sound the alarm was the guy at the end of the hall. What if intrusions happened while he was out? We would be defenseless!
+			</p>
+			<p class="content">
+			An improvement was engineered.
+			</p>
+			<p class="content">
+			The new design used a 'Wolo Model 330 Oooga Sound Fun 12 Volt Horn' found on Amazon. It has an output of 114 dB. For reference, <a href="http://en.wikipedia.org/wiki/Sound_pressure#Examples_of_sound_pressure">here's</a> Wikipedia's  table of sound pressure to real life examples. Power for the horn is switched with a MOSFET, which is in turn controlled by an Arduino Pro Mini. The Arduino is connected to a Rasberry Pi via a 434 MHz, 300 Baud serial RX-TX pair. 
+			</p>
+			<div class="image_box">
+				<img src="horn.jpg" alt="Wolo Model 330 Oooga Sound Fun 12 Volt Horn" height="20%" width="20%"/>
+				<p class="caption">Wolo Model 330 Oooga Sound Fun 12 Volt Horn</p>
+			</div>
+			<p class="content">
+			The connection is one way, from the Pi to the Arudino, and really only needs to transit one bit of information: turn on the alarm. There is some problem with noise on the receiver, so I am using a super simple yet every robust modulation: transmit 'U' = 0x55 = 0101 0101. 
+			</p>
+			<p class="content">
+			The horn is a pretty simple design, but to complete the hack, I made it untouchable. 114 dB's is excessively loud. It is still super loud from behind a door. On the deck, there is a closet with the ladder to the roof. This closet is always kept locked to prevent people from getting on, then falling off, the roof. Inside that room is the perfect place for the alarm. The only problem is that the closet has no outlets! So, I did the responsible thing, cut an extension cord in half, stripped the conductors and wired into the power that used to run to the telephone switchbox. Oh, and they wouldn't let me throw the breaker, so I wired into live wires.
+			</p>
+			<p class="content">
+			Fortunately, I didn't electrocute myself, so now in the closet is the horn, an Arduino, a lead-acid battery and its charger, plugged into half an extension cord wired into the wall. The battery means that you cannot disable the alarm even if you throw the breaker to the deck. Third Deckers are forever protected!
+			</p>
+			<h2 class="proj_section">Software (only)</h2>
+			<h3 class="proj_header">Music Muter</h3>
+			<h3 class="proj_header">mt7601 Patch for Arch Linux ARM</h3>
+		</div>
+
+	</body>
+</html>

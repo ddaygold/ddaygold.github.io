@@ -1,0 +1,28 @@
+div.header {
+	text-align: center
+}
+div.sitenav {
+	text-align: center
+}
+div.content {
+}
+p.content {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50em;
+	text-indent: 2em;
+}
+div.image_box{
+	text-align: center;
+}
+h2.proj_section {
+	border: 1px solid black;
+	text-align: center;
+}
+h3.proj_header {
+	text-align: center;
+}
+div.contact {
+	border: 1px solid black;
+	text-align: center;
+}
