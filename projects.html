@@ -62,12 +62,28 @@
 			</p>
 			<h3 class="proj_header">Subwoofer Cabinet</h3>
 			<p class="content">
-			The first major purchase I made with money I earned myself was a pair of Polk Audio RTi4 Bookshelf speakers in cherry veneer. Then, freshman year I saw a sale on a matching 10' Polk subwoofer on Amazon, so I bought that too. When I got into the Fraternity house, I bought a second subwoofer, which ignited my love of heavy bass music. Knowing that I love bass, one of the graduating brothers took me aside and showed me two 12" 400W subs he pulled out of his brother's car. Suddenly I had 1kW of subwoofer in my possession!
+			The first major purchase I made with money I earned myself was a pair of Polk Audio RTi4 Bookshelf speakers in cherry veneer. Then at the start of my freshman year, I saw a sale on a matching cherry 10' Polk subwoofer on Amazon, so I bought that too. When I got into the Fraternity house, I bought a second subwoofer, which ignited my love of heavy bass music. Knowing that I love bass, one of the graduating brothers took me aside and showed me two 12" 400W subs he pulled out of his brother's car. Suddenly I had 1kW of subwoofer in my possession!
 			</p>
 			<p class="content">
+			Along with the cones, the brother also sold me an amplifier, but I had no way to power the system, and no cabinet for the subs. There is one obvious choice when you need a lot of low ripple power at 12v: a computer power supply! I used a Corsiar TX850, which has a full load efficiency of 83.88% and rated continuous power of 850 Watts, which means that I'm pulling about 1kW from the wall at full load.
+			</p>
+			<p class="content">
+			1kW is enough to dim the lights in the room as the bass kicks, so I decided to put in a 2 Farad capacitor on the 12v rails (this is a surprisingly common addition to car audio it seems, the cap was way cheaper than I thought a massive capacitor would be). Unfortunately, it looks like few other bass music enthusiasts care about datasheets for their boomer caps, so I have no real engineering data on the capacitor. From observing the time it takes to reach 5RC, it seems like the capacitance is a bit below rating. In any event, you can't just wire in a 2F cap to the output of the supply, flip on the supply and expect any of your equipment not to make magic smoke. 
+			</p>
+			<p class="content">
+			The real engineering of the project came in designing a capacitor charge circuit. The design is pretty simple, a power resistor in parallel with a bank of MOSFETS, but it was very <i>custom</i> fabrication. I didn't want to wait for shipping on a power resistor, so I wound a custom one out of some nickel-chromium alloy wire we had in the robotics lab, then slid the windings into a pyrex test tube that I had ground the end off. It's effective, but it looks exactly like something you'd see on a mad scientist's table. To finish it all off, I have an awesome double switch panel, one to start the power supply, and one to bypass the power resistor. So far I haven't switched the order and blown up the FETs.
 			</p>
 			<h2 class="proj_section">Software (only)</h2>
 			<h3 class="proj_header">Music Muter</h3>
+			<p class="content">
+			As you might imagine, 800 Watts of Bass can be heard (felt) for quite a distance in the house. Beyond that, the Computer Engineering/Computer Science hybrid that I've become gives me a pretty shifted sleep schedule, so I like to boom my subs from about 10pm on. Other people in the house are less happy about boomy bass, so they might want to make the bass go away. 
+			</p>
+			<p class="content">
+			I'm an Engineer, I can solve problems with technology! First I set up a email scraper on a cron job every minute to watch for any email to music@chinetti.me with the first four letters of the subject 'MUTE' then mute first ALSA volume control (which is either master or the Pulseaudio master). That revision of the code is up at <a href="http://github.com/ddaygold/music-controller/">GitHub</a>.
+			</p>
+			<p class="content">
+			Eventually I realized that email was dumb, and slow, and why wasn't I just using a webpage. So I set up lighttpd on my desktop and now you can just go to <a href="http://silver.chinetti.me/">silver.chinetti.me</a> to mute it via a smaller CGI script.
+			</p>
 			<h3 class="proj_header">mt7601 Patch for Arch Linux ARM</h3>
 		</div>
 
