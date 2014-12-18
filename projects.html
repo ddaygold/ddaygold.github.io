@@ -47,11 +47,16 @@
 			There are three sections of the Arc Reactor design: the Led + Heatsink, the Power section, and the controller.
 			</p>
 			<p class="content">
-			<b>The LED</b>
+			<b>LED:</b>
+			I had two possibilities for LED selection: a smaller unit that would draw about 70 Watts and a monster array drawing 140. Both of the arrays were powerful enough to require a heatsink, and they had ratings for maximum thermal resistance. Unfortunately, cheap CPU heatsinks don't come with datasheets, so I had to buy a (way too expensive) heatsink from Digikey. The heatsink is basically a quarter inch of copper with fins. I machined mounting holes for the LED, then used Artic Silver CPU thermal compound as the thermal interface material.
 			</p>
 			<p class="content">
+			<b>Power Components:</b>
+			The Arc Reactor is fed from a 3 cell 'B' grade LiPo battery from Hobby King. Back of the envelope math puts runtime at something like 3 hours continuous. The LED runs at ~50 V however, so a boost converter is required. I found a 600 Watt DC-DC boost converter on banggood.com for only $20, and I was skeptical about the quality or legitimacy of the site, but I got my boost converter and it works. I don't have a charge controller, or even a low voltage cutout for the LiPo, instead I have a 2 wire voltmeter readout to monitor the remaining charge on the battery.
 			</p>
 			<p class="content">
+			<b>Controller:</b>
+			The LED is strapped to my chest, and the power components to my belt, but the controller is on my arm. The LED is switched by a MOSFET, which is controlled by a Teensy 3.1 reading from an accelerometer. If the magnitude of acceleration crosses a threshold, the light flashes. 
 			</p>
 			<h3 class="proj_header">Third Deck Alarm</h3>
 			<p class="content">
