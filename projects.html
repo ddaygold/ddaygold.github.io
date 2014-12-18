@@ -34,6 +34,9 @@
 			There is also a downstairs blast door of the lab, but it's a sliding door. That door has a similar pad of tinfoil, but instead of it being on the door and the door jam, closing the door grounds the pad. The grounding of the pad signals to an Arduino, which is connected to the server through an Ethernet shield (I bought the shield before Freshman year when I didn't know better). Code for the downstairs Arudino sketch can be found <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/downstairs/WebServer.ino">at GitHub</a>.
 			</p>
 			<h3 class="proj_header">Arc Reactor</h3>
+			<p class="content">
+
+			</p>
 			<h3 class="proj_header">Third Deck Alarm</h3>
 			<p class="content">
 			During my Junior year, I joined a fraternity on campus, &Phi;&Kappa;&Sigma;, or the "Skulls." Like many fraternities, we have some traditions and historic rivalries. One of those is the eternal war between the glorious armies of Third Deck, and the lowly peasants of Second Deck. The floors of the fraternity house are internally referred to as "decks," supposedly because of a Navy ex-serviceman influence in the years after WWII. There are two residential floor of the fraternity, the second, and the third. The members of the (superior) Third Deck, feel that their floor is "best deck" and often wish to remove Second Deck intruders from the deck.
@@ -65,7 +68,7 @@
 			The first major purchase I made with money I earned myself was a pair of Polk Audio RTi4 Bookshelf speakers in cherry veneer. Then at the start of my freshman year, I saw a sale on a matching cherry 10' Polk subwoofer on Amazon, so I bought that too. When I got into the Fraternity house, I bought a second subwoofer, which ignited my love of heavy bass music. Knowing that I love bass, one of the graduating brothers took me aside and showed me two 12" 400W subs he pulled out of his brother's car. Suddenly I had 1kW of subwoofer in my possession!
 			</p>
 			<p class="content">
-			Along with the cones, the brother also sold me an amplifier, but I had no way to power the system, and no cabinet for the subs. There is one obvious choice when you need a lot of low ripple power at 12v: a computer power supply! I used a Corsiar TX850, which has a full load efficiency of 83.88% and rated continuous power of 850 Watts, which means that I'm pulling about 1kW from the wall at full load.
+			Along with the cones, the brother also sold me an amplifier, but I had no way to power the system, and no cabinet for the subs. There is one obvious choice when you need a lot of low ripple power at 12v: a computer power supply! I used a Corsiar TX850, which has a full load efficiency of 83.88% (yeah, it actually has a <a href="tx850.png">datasheet</a>!) and rated continuous power of 850 Watts, which means that I'm pulling about 1kW from the wall at full load.
 			</p>
 			<p class="content">
 			1kW is enough to dim the lights in the room as the bass kicks, so I decided to put in a 2 Farad capacitor on the 12v rails (this is a surprisingly common addition to car audio it seems, the cap was way cheaper than I thought a massive capacitor would be). Unfortunately, it looks like few other bass music enthusiasts care about datasheets for their boomer caps, so I have no real engineering data on the capacitor. From observing the time it takes to reach 5RC, it seems like the capacitance is a bit below rating. In any event, you can't just wire in a 2F cap to the output of the supply, flip on the supply and expect any of your equipment not to make magic smoke. 
@@ -85,6 +88,15 @@
 			Eventually I realized that email was dumb, and slow, and why wasn't I just using a webpage. So I set up lighttpd on my desktop and now you can just go to <a href="http://silver.chinetti.me/">silver.chinetti.me</a> to mute it via a smaller CGI script.
 			</p>
 			<h3 class="proj_header">mt7601 Patch for Arch Linux ARM</h3>
+			<p class="content">
+			I spent the summers after my Sophomore and Junior years in NYC working for Goldman Sachs as an intern. Although NYC is full of distractions and fun stuff to do, I still have a tinkerer's urge to build stuff. There's an awesome hackerspace in Brooklyn called NYC Resistor, so I went to a bunch of their open houses just to be around hackers and builders. At the NYCR, they have a vending machine that sells Beaglebone Blacks. In the summer of 2014 BBB's were out of stock everywhere, and undergoing a price hike, so I jumped on the chance to buy one there. 
+			</p>
+			<p class="content">
+			I've been running Linux on my machines since Sophomore year of high school, and Arch Linux since Junior year of college. There's a port of Arch <aa href="http://archlinuxarm.org">for ARM</a> that I installed on my BBB. A friend from school had a recommendation for a case from Logic Supply, so I picked up a USB WiFi module there as well. 
+			</p>
+			<p class="content">
+			Now, you'd think that if you <i>specifically sold</i> a WiFi adapter for a BeagleBone, it'd have working drivers. Well, this one's vendor supplied modules broken on newer kernels. Fortunately, I had spent the summer working on a big C++ project, so I wasn't as scared of a big unknown codebase. Diving through the compilation errors, it turned out that the only problem was that a struct had been renamed. Pretty simple fix. The module compiles and works now, and I fixed the PKGBUILD and submitted my first pull request on GitHub! I have commits in a open source project! <a href="https://github.com/archlinuxarm/PKGBUILDs/commits/master/alarm/dkms-mt7601">look!</a>
+			</p>
 		</div>
 
 	</body>
