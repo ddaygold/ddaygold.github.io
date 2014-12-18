@@ -25,7 +25,7 @@
 			<h3 class="proj_header">Goliath</h3>
 			<h3 class="proj_header">ITR Lab Door Monitoring</h3>
 			<p class="content">
-			Lab door monitoring was the first project I did at IIT. Before I came to IIT, some members of the robotics team had installed a sensor on the front door to display if the lab was open or closed on the website. They had used a limit switch off a FRC kit to sense the position of the door, but that design was plagued with problems. Limit switches are great if you have solid mounting points on a robot, but they were just hot gluing the switch to the door, so it was always either misaligned or falling off. 
+			Lab door monitoring was the first project I built at ITR. Before I came to IIT, some members of the robotics team had installed a sensor on the front door to display if the lab was open or closed on the website. They had used a limit switch off a FRC kit to sense the position of the door, but that design was plagued with problems. Limit switches are great if you have solid mounting points on a robot, but they were just hot gluing the switch to the door, so it was always either misaligned or falling off. 
 			</p>
 			<p class="content">
 			My replacement was extremely simple: a pad of tinfoil on the door jam, and a wire on the door itself. It has lasted for all four years without incident, and remains up working at the ITR <a href="http://illinoistechrobotics.org/lab_status">lab status</a> page.
@@ -35,7 +35,23 @@
 			</p>
 			<h3 class="proj_header">Arc Reactor</h3>
 			<p class="content">
-
+			We take great pride in the robotics lab flying under the university radar. When all the floodlamps began burning out our first thought wasn't to ask Faculties to replace them, it was to replace them ourselves. Being technical folks, we wanted to have LED lighting instead of high wattage incandescents. Digikey sells some really high power LED arrays, so we grabbed some of those and wired them off computer power supplies. Now we have motion activated lighting!
+			</p>
+			<p class="content">
+			The LED arrays are insanely bright. Their power requirements aren't that bad, only 140 Watts. I had an idea to weaponize them. If you strapped on to your chest, and put a controller in your hand, you could flash blind people temporarily. 
+			</p>
+			<p class="content">
+			Microsoft sponsored a hackathon on campus, for which you were supposed to use C# to build Windows Phone apps, but I emailed the organizers and they were totally fine with me programming on Linux, for open hardware, in C. So, I built the weaponized LED array, which I called the "Arc Reactor" after the chest gadget from Iron Man.
+			</p>
+			<p class="content">
+			There are three sections of the Arc Reactor design: the Led + Heatsink, the Power section, and the controller.
+			</p>
+			<p class="content">
+			<b>The LED</b>
+			</p>
+			<p class="content">
+			</p>
+			<p class="content">
 			</p>
 			<h3 class="proj_header">Third Deck Alarm</h3>
 			<p class="content">
@@ -58,14 +74,14 @@
 			The connection is one way, from the Pi to the Arudino, and really only needs to transit one bit of information: turn on the alarm. There is some problem with noise on the receiver, so I am using a super simple yet robust modulation: transmit 'U' = 0x55 = 0101 0101. 
 			</p>
 			<p class="content">
-			The horn is a pretty simple design, but to complete the hack, I made it untouchable. 114 dB's is excessively loud. It is still super loud from behind a door. On the deck, there is a closet with the ladder to the roof. This closet is always kept locked to prevent people from getting on, then falling off, the roof. Inside that room is the perfect place for the alarm. The only problem is that the closet has no outlets! So, I did the responsible thing, cut an extension cord in half, stripped the conductors and wired into the power that used to run to the telephone switchbox. Oh, and they wouldn't let me throw the breaker, so I wired into live wires.
+			The horn is a simple design, but to complete the hack, I made it untouchable. 114 dB's is excessively loud. It is still super loud from behind a door. On the deck, there is a closet with the ladder to the roof. This closet is always kept locked to prevent people from getting on, then falling off, the roof. Inside that room is the perfect place for the alarm. The only problem is that the closet has no outlets! So, I did the responsible thing, cut an extension cord in half, stripped the conductors and wired into the power that used to run to the telephone switchbox. Oh, and they wouldn't let me throw the breaker, so I wired into live wires.
 			</p>
 			<p class="content">
 			Fortunately, I didn't electrocute myself, so now in the closet is the horn, an Arduino, a lead-acid battery and its charger, plugged into half an extension cord wired into the wall. The battery means that you cannot disable the alarm even if you throw the breaker to the deck. Third Deckers are forever protected!
 			</p>
 			<h3 class="proj_header">Subwoofer Cabinet</h3>
 			<p class="content">
-			The first major purchase I made with money I earned myself was a pair of Polk Audio RTi4 Bookshelf speakers in cherry veneer. Then at the start of my freshman year, I saw a sale on a matching cherry 10' Polk subwoofer on Amazon, so I bought that too. When I got into the Fraternity house, I bought a second subwoofer, which ignited my love of heavy bass music. Knowing that I love bass, one of the graduating brothers took me aside and showed me two 12" 400W subs he pulled out of his brother's car. Suddenly I had 1kW of subwoofer in my possession!
+			The first major purchase I made with money I earned was a pair of Polk Audio RTi4 Bookshelf speakers in cherry veneer. Then at the start of my freshman year, I saw a sale on a matching cherry 10' Polk subwoofer on Amazon, so I bought that too. When I got into the Fraternity house, I bought a second subwoofer, which ignited my love of heavy bass music. Knowing that I love bass, one of the graduating brothers took me aside and showed me two 12" 400W subs he pulled out of his brother's car. Suddenly I had 1kW of subwoofer in my possession!
 			</p>
 			<p class="content">
 			Along with the cones, the brother also sold me an amplifier, but I had no way to power the system, and no cabinet for the subs. There is one obvious choice when you need a lot of low ripple power at 12v: a computer power supply! I used a Corsiar TX850, which has a full load efficiency of 83.88% (yeah, it actually has a <a href="tx850.png">datasheet</a>!) and rated continuous power of 850 Watts, which means that I'm pulling about 1kW from the wall at full load.
