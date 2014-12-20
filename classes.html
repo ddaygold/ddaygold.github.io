@@ -22,8 +22,50 @@
 		</div>
 		<div class="content">
 			<p class="content">
+			I set up a git repository for all my classes I've taken since
 			</p>
-		</div>
-
+			<div class="code">
+				<p class="code">
+				<code>
+					commit a0ab077fb343bff9b6a3f7814e15e20c47e513b9<br>
+					Author: Peter Chinetti &lt;peter@chinetti.me&gt;<br>
+					Date:   Sun Feb 3 01:39:19 2013 -0600
+				</code>
+				</p>
+			</div>
+			<p class="content">
+			The repository can be found at <a href="http://chinetti.me/classes">my server</a> as a flattened checkout of HEAD. Some of the classes/projects I'm most proud of are:
+			</p>
+			<h2 class="proj_section">CS 480: Artificial Intelligence</h2>
+			<h3 class="proj_header">Random Number Generator Seed Reverser</h3>
+			<p class="content">
+			In a project for this class, we were given a "market simulation" that would generate 10000 "products" with a buy price, a sell price, and a "broken" flag. Your code could choose to either buy or pass on the product. If the "broken" flag was false, and you choose to buy the product generated income = sell-buy. If the flag was true, and you choose to buy the product, you lost the buy price. We were also given a global rate of failures, so we could compute the expected value of the product, maximize profit, blah blah blah, easy introductory project.
+			</p>
+			<p class="content">
+			I built the expected code:
+			</p>
+			<div class="code">
+				<p class="code">
+				<code>
+					if((sell-buy)*(rate_of_good_products) > buy*(1 - rate_of_good_products)){buy();} else {pass();}
+				</code>
+				</p>
+			</div>
+			<p class="content">
+			But seriously, that's so boring. A much more fun solution would be to use the buy price and sell price to reverse what the random number generator seed must be, then just <i>know</i> if the product was going to be bad or not and buy if it wasn't.
+			</p>
+			<p class="content">
+			I did that in my code <a href="http://chinetti.me/classes/cs480/proj/phase1-code/agents/AgentWin.java">here</a>.
+			</p>
+			<h2 class="proj_section">ECE 485: Computer Organization and Design</h2>
+			<h3 class="proj_header">RISC Processor VHDL Implementation</h3>
+			<p class="content">
+			This class was about the design of CPUs, especially RISC style CPUs. The final project was the implementation and writeup of a subset of RISC instructions. <a href="http://chinetti.me/classes/ece485/proj2/report.pdf">This is my report on the project.</a>
+			</p>
+			<h2 class="proj_section">ECE 441: Microcomputers</h2>
+			<h3 class="proj_header">Serial Control Terminal in Motorola 68k assembly</h3>
+			<p class="content">
+			Although I was disappointed that this class did not cover a more modern processor (ARM), the final project for this class was pretty cool. We had to implement a serial terminal in assembly and give the terminal some basic commands. My implementation ended up being about 950 lines long, and my report on the project was 49 pages long (fortunately there were many flow-charts and code listings). You can find it <a href="http://chinetti.me/classes/ece441/project/report.pdf">here</a>
+			</p>
 	</body>
 </html>
