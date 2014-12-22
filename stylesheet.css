@@ -12,6 +12,9 @@ div.content {
 p.content {
 	text-indent: 2em;
 }
+p.caption {
+	text-align: center;
+}
 div.image_box{
 	text-align: center;
 }
@@ -25,6 +28,11 @@ h3.proj_header {
 div.contact {
 	border: 1px solid black;
 	text-align: center;
+}
+div.videobox{
+	width: 640px;
+	margin-left: auto;
+	margin-right: auto;
 }
 div.code{
 	background: black;
