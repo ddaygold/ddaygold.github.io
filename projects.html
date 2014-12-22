@@ -59,6 +59,10 @@
 			<b>LED:</b>
 			I had two possibilities for LED selection: a smaller unit that would draw about 70 Watts and a monster array drawing 140. Both of the arrays were powerful enough to require a heatsink, and they had ratings for maximum thermal resistance. Unfortunately, cheap CPU heatsinks don't come with datasheets, so I had to buy a (way too expensive) heatsink from Digikey. The heatsink is basically a quarter inch of copper with fins. I machined mounting holes for the LED, then used Artic Silver CPU thermal compound as the thermal interface material.
 			</p>
+			<div class="image_box">
+				<img src="Arc_reactor_milling.jpg" alt="Milling the LED mounting plate" width="350"/>
+				<p class="caption">Milling the LED mounting plate</p>
+			</div>
 			<p class="content">
 			<b>Power Components:</b>
 			The Arc Reactor is fed from a 3 cell 'B' grade LiPo battery from Hobby King. Back of the envelope math puts runtime at something like 3 hours continuous. The LED runs at ~50 V however, so a boost converter is required. I found a 600 Watt DC-DC boost converter on banggood.com for only $20, and I was skeptical about the quality or legitimacy of the site, but I got my boost converter and it works. I don't have a charge controller, or even a low voltage cutout for the LiPo, instead I have a 2 wire voltmeter readout to monitor the remaining charge on the battery.
@@ -140,6 +144,12 @@
 			</p>
 			<p class="content">
 			Now, you'd think that if you <i>specifically sold</i> a WiFi adapter for a BeagleBone, it'd have working drivers. Well, this one's vendor supplied modules are broken on newer kernels. Fortunately, I had spent the summer working on a big C++ project, so I wasn't as scared of a big unknown codebase. Diving through the compilation errors, it turned out that the only problem was that a struct had been renamed. Pretty simple fix. The module compiles and works now, and I fixed the PKGBUILD and submitted my first pull request on GitHub! I have commits in a open source project! <a href="https://github.com/archlinuxarm/PKGBUILDs/commits/master/alarm/dkms-mt7601">look!</a>
+			<div class="image_box">
+				<img src="BBB_back.jpg" alt="BBB front" width="350"/> </br>
+				<p class="caption">The front of my Beagle Bone Black laptop</p>
+				<img src="BBB_front.jpg" alt="BBB back" width="350"/> </br>
+				<p class="caption">The back of my Beagle Bone Black laptop</p>
+			</div>
 			</p>
 		</div>
 
