@@ -1,0 +1,46 @@
+div.header {
+	text-align: center
+}
+div.sitenav {
+	text-align: center
+}
+div.content {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50em;
+}
+p.content {
+	text-indent: 2em;
+}
+p.caption {
+	text-align: center;
+}
+div.image_box{
+	text-align: center;
+}
+h2.proj_section {
+	border: 1px solid black;
+	text-align: center;
+}
+h3.proj_header {
+	text-align: center;
+}
+div.contact {
+	border: 1px solid black;
+	text-align: center;
+}
+div.videobox{
+	width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.code{
+	background: black;
+	border: 1px solid black;
+}
+p.code {
+	margin: 1px;
+	padding-left: 5px;
+	border: 1px solid white;
+	color: white;
+}

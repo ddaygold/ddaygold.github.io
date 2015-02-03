@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<title>PROJECTS</title>
+		<link href="http://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
+		<script src="http://vjs.zencdn.net/4.11/video.js"></script>
+		<style type="text/css">
+  .vjs-default-skin { color: #ffffff; }
+		</style>
+
+	</head>
+	<body>
+		<div class="header">
+			<h1 >
+				PROJECTS
+			</h1>
+		</div>
+		<div class="sitenav">
+			<a class="sitenav" href="index.html">About</a> | 
+			<a class="sitenav" href="projects.html">Projects</a> | 
+			<a class="sitenav" href="classes.html">Classes</a>
+			<hr>
+		</div>
+		<div class="content">
+			<h2 class="proj_section">Hardware (and Software)</h2>
+			<h3 class="proj_header">Fenrir</h3>
+			<p class="content">
+			Fenrir was the first project I headed at the robotics lab. I did not design the robot, it was built before I came to IIT. I rebuilt it to better compete in competition and rewrote it's control software. A friend on the team built an awesome robotic arm to mount on Fenrir that was controlled by an exoskeleton around his own arm. The controls changes and the robotic arm led Fenrir to his best finish in the history of the club, but his diwheel platform remains difficult to effectively control and maneuver.
+			</p>
+			<p class="content">
+			Photos of the robot can be found at the <a href="http://illinoistechrobotics.org/projects">ITR projects page</a>.
+			</p>
+			<h3 class="proj_header">Goliath</h3>
+			<p class="content">
+			The second robot I worked on with ITR is Golath, which is written up well at the <a href="http://illinoistechrobotics.org/projects">ITR projects page</a>. This robot won a demolition competition. During the competition the only damage was one of the motor controller cables unplugging. After plugging back in the wire, we drove the robot off the field of demolished robots.
+			</p>
+			<div class="image_box">
+				<a href="goliath.jpg">
+				<img src="goliath_small.jpg" alt="Goliath" width="350"/>
+				</a>
+				<p class="caption">Goliath, in demolition mode</p>
+				<img src="demo_win.jpg" alt="Our Demolition Round win plaque" width="350"/>
+				<p class="caption">Our Demolition Round win plaque</p>
+				<p class="caption">Snapchat doesn't have imagemagick</p>
+			</div>
+			<h3 class="proj_header">ITR Lab Door Monitoring</h3>
+			<p class="content">
+			Lab door monitoring was the first project I built at ITR. Before I came to IIT, some members of the robotics team had installed a sensor on the front door to display if the lab was open or closed on the website. They had used a limit switch off a FRC kit to sense the position of the door, but that design was plagued with problems. Limit switches are great if you have solid mounting points on a robot, but they were just hot gluing the switch to the door, so it was always either misaligned or falling off. 
+			</p>
+			<p class="content">
+			My replacement was extremely simple: a pad of tinfoil on the door jam, and a wire on the door itself. It has lasted for all four years without incident, and remains up and working at the ITR <a href="http://illinoistechrobotics.org/lab_status">lab status</a> page.
+			</p>
+			<p class="content">
+			There is also a downstairs blast door of the lab, but it's a sliding door. That door has a similar pad of tinfoil, but instead of it being on the door and the door jam, closing the door grounds the pad. The grounding of the pad signals to an Arduino, which is connected to the server through an Ethernet shield (I bought the shield before Freshman year when I didn't know better). Code for the downstairs Arudino sketch can be found <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/downstairs/WebServer.ino">at GitHub</a>.
+			</p>
+			<h3 class="proj_header">Arc Reactor</h3>
+			<p class="content">
+			We take great pride in the robotics lab being self-sufficient. When all the floodlamps began burning out our first thought wasn't to ask Faculties to replace them, it was to replace them ourselves. Being technical folks, we wanted to have LED lighting instead of high wattage incandescents. Digikey sells some really high power LED arrays, so we grabbed some of those and wired them off computer power supplies. Now we have motion activated lighting!
+			</p>
+			<p class="content">
+			The LED arrays are insanely bright. Their power requirements aren't that bad, only 140 Watts. I had an idea to weaponize them. If you strapped on to your chest, and put a controller in your hand, you could flash blind people temporarily. 
+			</p>
+			<div class="videobox">
+				<video id="Arc_Reactor_Test" class="video-js vjs-default-skin" controls
+				 preload="auto" width="640" height="264" poster="Arc_reactor_test.jpg"
+					     data-setup="{}">
+					<source src="Arc_reactor_test.mp4" type='video/mp4'>
+					<source src="Arc_reactor_test.webm" type='video/webm'>
+					<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+				</video>
+				<p class="caption">An initial test of the LED</p>
+			</div>
+			<p class="content">
+			Microsoft sponsored a hackathon on campus, for which you were supposed to use C# to build Windows Phone apps, but I emailed the organizers and they were totally fine with me programming on Linux, for open hardware, in C. So, I built the weaponized LED array, which I called the "Arc Reactor" after the chest gadget from Iron Man.
+			</p>
+			<p class="content">
+			There are three sections of the Arc Reactor design: the LED + Heatsink, the Power section, and the controller.
+			</p>
+			<p class="content">
+			<b>LED:</b>
+			I had two possibilities for LED selection: a smaller unit that would draw about 70 Watts and a monster array drawing 140. Both of the arrays were powerful enough to require a heatsink, and they had ratings for maximum thermal resistance. Unfortunately, cheap CPU heatsinks don't come with datasheets, so I had to buy a (way too expensive) heatsink from Digikey. The heatsink is basically a quarter inch of copper with fins. I machined mounting holes for the LED, then used Artic Silver CPU thermal compound as the thermal interface material.
+			</p>
+			<div class="image_box">
+				<img src="Arc_reactor_milling.jpg" alt="Milling the LED mounting plate" width="350"/>
+				<p class="caption">Milling the LED mounting plate</p>
+			</div>
+			<p class="content">
+			<b>Power Components:</b>
+			The Arc Reactor is fed from a 3 cell 'B' grade LiPo battery from Hobby King. Back of the envelope math puts runtime at something like 3 hours continuous. The LED runs at ~50 V however, so a boost converter is required. I found a 600 Watt DC-DC boost converter on banggood.com for only $20, and I was skeptical about the quality or legitimacy of the site, but I got my boost converter and it works. I don't have a charge controller, or even a low voltage cutout for the LiPo, instead I have a 2 wire voltmeter readout to monitor the remaining charge on the battery.
+			</p>
+			<p class="content">
+			<b>Controller:</b>
+			The LED is strapped to my chest, and the power components to my belt, but the controller is on my arm. The LED is switched by a MOSFET, which is controlled by a Teensy 3.1 reading from an accelerometer. If the magnitude of acceleration crosses a threshold, the light flashes. 
+			</p>
+			<div class="image_box">
+				<img src="arc_1.jpg" alt="The Arc Reactor the day after it was built" width="350"/> </br>
+				<p class="caption">The Arc Reactor the day after it was built</p>
+				<img src="arc_2.jpg" alt="The Arc Reactor at the Adler Planetairum" width="350"/>
+				<p class="caption">The Arc Reactor at the Adler Planetarium</br>for their Hops 'n' Bots event</p>
+			</div>
+			<h3 class="proj_header">Third Deck Alarm</h3>
+			<p class="content">
+			During my Junior year, I joined a fraternity on campus, &Phi;&Kappa;&Sigma;, or the "Skulls." Like many fraternities, we have some traditions and historic rivalries. One of those is the eternal war between the glorious armies of Third Deck, and the lowly peasants of Second Deck. The floors of the fraternity house are internally referred to as "decks," supposedly because of Navy ex-servicemen's influence in the years after WWII. There are two residential floor of the fraternity, the second, and the third. The members of the (superior) Third Deck, feel that their floor is "best deck" and often wish to remove Second Deck intruders from the deck.
+			</p>
+			<p class="content">
+			The Third Deckers are rallied by the Third Deck alarm. When I moved in during my pledge semester, the Third Deck Alarm was an MP3 of a submarine's dive horn. The guy at the end of the hall would switch on his extra set of speakers and blare the siren down the hall. There were two main problems with the MP3 + speaker based third deck alarm: volume and control. Speakers can only get so loud, and they might not be effective through closed doors. Also, the only person who could sound the alarm was the guy at the end of the hall. What if intrusions happened while he was out? We would be defenseless!
+			</p>
+			<p class="content">
+			An improvement was engineered.
+			</p>
+			<p class="content">
+			The new design used a 'Wolo Model 330 Oooga Sound Fun 12 Volt Horn' found on Amazon. It has an output of 114 dB. For reference, <a href="http://en.wikipedia.org/wiki/Sound_pressure#Examples_of_sound_pressure">here's</a> Wikipedia's  table of sound pressure to real life examples. Power for the horn is switched with a MOSFET, which is in turn controlled by an Arduino Pro Mini. The Arduino is connected to a Rasberry Pi via a 434 MHz, 300 Baud serial RX-TX pair. 
+			</p>
+			<div class="image_box">
+				<img src="horn.jpg" alt="Wolo Model 330 Oooga Sound Fun 12 Volt Horn" width="250"/>
+				<p class="caption">Wolo Model 330 Oooga Sound Fun 12 Volt Horn</p>
+				<p class="caption"><i>Yes, that's the actual name</i></p>
+			</div>
+			<p class="content">
+			The connection is one way, from the Pi to the Arudino, and really only needs to transit one bit of information: turn on the alarm. There is some problem with noise on the receiver, so I am using a super simple yet robust modulation: transmit 'U' = 0x55 = 0101 0101. 
+			</p>
+			<p class="content">
+			The horn is a simple design, but to complete the hack, I made it untouchable. 114 dB's is excessively loud. It is still super loud from behind a door. On the deck, there is a closet with the ladder to the roof. This closet is always kept locked to prevent people from getting on, then falling off, the roof. Inside that room is the perfect place for the alarm. The only problem is that the closet has no outlets! So, I did the responsible thing, cut an extension cord in half, stripped the conductors and wired into the power that used to run to the telephone switchbox. Oh, and they wouldn't let me throw the breaker, so I wired into live wires.
+			</p>
+			<p class="content">
+			Fortunately, I didn't electrocute myself, so now in the closet is the horn, an Arduino, a lead-acid battery and its charger, plugged into half an extension cord wired into the wall. The battery means that you cannot disable the alarm even if you throw the breaker to the deck. Third Deckers are forever protected!
+			</p>
+			<h3 class="proj_header">Subwoofer Cabinet</h3>
+			<p class="content">
+			The first major purchase I made with money I earned was a pair of Polk Audio RTi4 Bookshelf speakers in cherry veneer. Then at the start of my freshman year, I saw a sale on a matching cherry 10' Polk subwoofer on Amazon, so I bought that too. When I got into the Fraternity house, I bought a second subwoofer, which ignited my love of heavy bass music. Knowing that I love bass, one of the graduating brothers took me aside and showed me two 12" 400W subs he pulled out of his brother's car. Suddenly I had 1kW of subwoofer in my possession!
+			</p>
+			<div class="image_box">
+				<a href="sub.jpg">
+				<img src="sub_small.jpg" alt="One of the subwoofers" width="350"/>
+				</a>
+				<p class="caption">One of the woofers sitting on my desk in the robotics lab</p>
+			</div>
+			<p class="content">
+			Along with the cones, the brother also sold me an amplifier, but I had no way to power the system, and no cabinet for the subs. There is one obvious choice when you need a lot of low ripple power at 12v: a computer power supply! I used a Corsiar TX850, which has a full load efficiency of 83.88% (yeah, it actually has a <a href="tx850.png">datasheet</a>!) and rated continuous power of 850 Watts, which means that I'm pulling about 1kW from the wall at full load.
+			</p>
+			<p class="content">
+			1kW is enough to dim the lights in the room as the bass kicks, so I decided to put in a 2 Farad capacitor on the 12v rails (this is a surprisingly common addition to car audio it seems, the cap was way cheaper than I thought a massive capacitor would be). Unfortunately, it looks like few other bass music enthusiasts care about datasheets for their boomer caps, so I have no real engineering data on the capacitor. From observing the time it takes to reach 5RC, it seems like the capacitance is a bit below rating. In any event, you can't just wire in a 2F cap to the output of the supply, flip on the supply and expect any of your equipment not to make magic smoke. 
+			</p>
+			<p class="content">
+			The real engineering of the project came in designing a capacitor charge circuit. The design is pretty simple, a power resistor in parallel with a bank of MOSFETS, but it was very <i>custom</i> fabrication. I didn't want to wait for shipping on a power resistor, so I wound one out of some nickel-chromium alloy wire we had in the robotics lab, then slid the windings into a pyrex test tube that I had ground the end off. It's effective, but it looks exactly like something you'd see on a mad scientist's table. To finish it all off, I have an awesome double switch panel, one to start the power supply, and one to bypass the power resistor. So far I haven't switched the order and blown up the FETs.
+			</p>
+			<p class="content">
+			To make an a cabinet for the subs, I used the Idea Shop on campus, which is like a university run hackerspace except with more rules. They CNC routed some 3/4" MDF for the enclosure. Lucky for me, the datasheet on the subs had specific dimensions for a cabinet, so I didn't have to do any acoustic design work.
+			</p>
+			<h2 class="proj_section">Software (only)</h2>
+			<h3 class="proj_header">Music Muter</h3>
+			<p class="content">
+			As you might imagine, 800 Watts of Bass can be heard (felt) for quite a distance in the house. Beyond that, the Computer Engineering/Computer Science hybrid that I've become gives me a pretty shifted sleep schedule, so I like to boom my subs from about 10pm on. Other people in the house are less happy about boomy bass, so they might want to make the bass go away. 
+			</p>
+			<p class="content">
+			I'm an Engineer, I can solve problems with technology! First I set up a email scraper on a cron job every minute to watch for any email to music@chinetti.me with the first four letters of the subject 'MUTE' then mute first ALSA volume control (which is either master or the Pulseaudio master). That revision of the code is up at <a href="http://github.com/ddaygold/music-controller/">GitHub</a>.
+			</p>
+			<p class="content">
+			Eventually I realized that email was dumb, and slow, and why wasn't I just using a webpage. So I set up lighttpd on my desktop and now you can just go to <a href="http://silver.chinetti.me/">silver.chinetti.me</a> to mute it via a smaller CGI script.
+			</p>
+			<h3 class="proj_header">mt7601 Patch for Arch Linux ARM</h3>
+			<p class="content">
+			I spent the summers after my Sophomore and Junior years in NYC working for Goldman Sachs as an intern. Although NYC is full of distractions and fun stuff to do, I still have a tinkerer's urge to build stuff. There's an awesome hackerspace in Brooklyn called NYC Resistor, so I went to a bunch of their open houses just to be around hackers and builders. At the NYCR, they have a vending machine that sells Beaglebone Blacks. In the summer of 2014 BBB's were out of stock everywhere, and undergoing a price hike, so I jumped on the chance to buy one there. 
+			</p>
+			<p class="content">
+			I've been running Linux on my machines since my Sophomore year of high school, and Arch Linux since Junior year of college. There's a port of Arch <a href="http://archlinuxarm.org">for ARM</a> that I installed on my BBB. A friend from school had a recommendation for a case from Logic Supply, so I picked up a USB WiFi module there as well. 
+			</p>
+			<p class="content">
+			Now, you'd think that if you <i>specifically sold</i> a WiFi adapter for a BeagleBone, it'd have working drivers. Well, this one's vendor supplied modules are broken on newer kernels. Fortunately, I had spent the summer working on a big C++ project, so I wasn't as scared of a big unknown codebase. Diving through the compilation errors, it turned out that the only problem was that a struct had been renamed. Pretty simple fix. The module compiles and works now, and I fixed the PKGBUILD and submitted my first pull request on GitHub! I have commits in a open source project! <a href="https://github.com/archlinuxarm/PKGBUILDs/commits/master/alarm/dkms-mt7601">look!</a>
+			<div class="image_box">
+				<a href="BBB_back.jpg">
+					<img src="BBB_front_small.jpg" alt="BBB front" width="350"/> </br>
+				</a>
+				<p class="caption">The front of my Beagle Bone Black laptop</p>
+				<a href="BBB_front.jpg">
+					<img src="BBB_back_small.jpg" alt="BBB back" width="350"/> </br>
+				</a>
+				<p class="caption">The back of my Beagle Bone Black laptop</p>
+			</div>
+			</p>
+		</div>
+
+	</body>
+</html>
