@@ -35,7 +35,7 @@
       </p>
       <h3 class="proj_header">Goliath</h3>
       <p class="content">
-	The second robot I worked on with ITR is Golath, which is written up well at the <a href="http://illinoistechrobotics.org/projects">ITR projects page</a>. This robot won a demolition competition. During the competition the only damage was one of the motor controller cables unplugging. After plugging back in the wire, we drove the robot off the field of demolished robots.
+	The second robot I worked on with ITR is Goliath, which is written up well at the <a href="http://illinoistechrobotics.org/projects">ITR projects page</a>. During <a href="http://jsdc.ec.illinois.edu/">Jerry Sanders Creative Design Competition (JSDC)</a> 2014, this robot won a demolition competition. During the competition the only damage was one of the motor controller cables unplugging. After plugging back in the wire, we drove the robot off the field of demolished robots.
       </p>
       <div class="image_box">
 	<a href="goliath.jpg">
@@ -45,6 +45,15 @@
 	<img src="demo_win.jpg" alt="Our Demolition Round win plaque" width="350"/>
 	<p class="caption">Our Demolition Round win plaque</p>
 	<p class="caption">Snapchat doesn't have imagemagick</p>
+      </div>
+      <p class="content">
+	Goliath again won the demolition round in 2015, with more armor and less damage to itself.
+      </p>
+      <div class="image_box">
+	<a href="goliath2.jpg">
+	  <img src="goliath2_small.jpg" alt="Goliath in 2015" width="350"/>
+	</a>
+	<p class="caption">We added a great mechanical engineer to the team, and his contributions shone through on the sloped armor</p>
       </div>
       <h3 class="proj_header">ITR Lab Door Monitoring</h3>
       <p class="content">
@@ -73,7 +82,7 @@
 	<p class="caption">The downstairs door control box.</p>
       </div>
       <p class="content">
-	The front door sensor was my first contribution to the robotics lab, and I wanted a project that showed off what I had learned to be one of my last. The door sensor is useful in telling you if anyone is in the lab at any given time, but it is not good at telling you <i>who</i> is in the lab. That problem is harder. How do you identify each person easily and quickly? IIT issues RFID cards to students. Being a forward minded place, IIT was an early adopter of the technology, so they rolled out ID cards before the technology offered encryption. IIT ID cards are 125 kHz 'prox' style cards that can be decoded with any reader on the frequency. I bought a used one off ebay for $15, wrote a <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/upstairs/reader/reader.ino">quick Arudino sketch</a> to print out the card number over serial, then wrote <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/upstairs/gui.py">a Python application</a> to sign people in and out. My user documentation for the system is <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/upstairs/doc/usage.pdf?raw=true">here [PDF]</a>. The people in the lab can be found at <a href="https://illinoistechrobotics.org/members.html">the incredibly simple page I made</a>. (Web design is not my top skill). The pictures are stored in <a href="http://redis.io">redis</a>, along with a name and a in-lab/out-of-lab status. Seeing how I'm much more comfortable with Unix commands than I am with complicated web frameworks, the page is statically generated every minute on a cron job. Perfect for a one off, light utilization system. The laptop is on an internal WiFi network, behind a NAT, while the server is on a IIT public ip address, so the laptop connects to the server's redis instace over an stunnel.
+	The front door sensor was my first contribution to the robotics lab, and I wanted a project that showed off what I had learned freshman to senior year. See, the problem is that the door sensor is useful in telling you if anyone is in the lab at any given time, but it is not good at telling you <i>who</i> is in the lab. That problem is harder. How do you identify each person easily and quickly? IIT issues RFID cards to students. Being a forward minded place, IIT was an early adopter of the technology, so they rolled out ID cards before the technology offered encryption. IIT ID cards are 125 kHz 'prox' style cards that can be decoded with any reader on the frequency. I bought a used one off eBay for $15, wrote a <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/upstairs/reader/reader.ino">quick Arudino sketch</a> to print out the card number over serial, then wrote <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/upstairs/gui.py">a Python application</a> to sign people in and out. My user documentation for the system is <a href="https://github.com/illinoistechrobotics/frontdoor/blob/master/upstairs/doc/usage.pdf?raw=true">here [PDF]</a>. The people in the lab can be found at <a href="https://illinoistechrobotics.org/members.html">the incredibly simple page I made</a>. (Web design is not my top skill). The pictures are stored in <a href="http://redis.io">Redis</a>, along with a name and a in-lab/out-of-lab status. Seeing how I'm much more comfortable with Unix commands than I am with complicated web frameworks, the page is statically generated every minute on a cron job. Perfect for a one-off, light utilization system. The laptop is on an internal WiFi network, behind a NAT, while the server is on a IIT public ip address, so the laptop connects to the server's Redis instance over an stunnel.
       </p>
       <div class="image_box">
 	<a href="laptop_wall.jpg">
@@ -83,7 +92,7 @@
       </div>
       <h3 class="proj_header">Arc Reactor</h3>
       <p class="content">
-	We take great pride in the robotics lab being self-sufficient. When all the floodlamps began burning out our first thought wasn't to ask Faculties to replace them, it was to replace them ourselves. Being technical folks, we wanted to have LED lighting instead of high wattage incandescents. Digikey sells some really high power LED arrays, so we grabbed some of those and wired them off computer power supplies. Now we have motion activated lighting!
+	We take great pride in the robotics lab being self-sufficient. When all the flood-lamps began burning out our first thought wasn't to ask Faculties to replace them, it was to replace them ourselves. Being technical folks, we wanted to have LED lighting instead of high wattage incandescent. Digikey sells some really high power LED arrays, so we grabbed some of those and wired them off computer power supplies. Now we have motion activated lighting!
       </p>
       <p class="content">
 	The LED arrays are insanely bright. Their power requirements aren't that bad, only 140 Watts. I had an idea to weaponize them. If you strapped on to your chest, and put a controller in your hand, you could flash blind people temporarily. 
@@ -106,7 +115,7 @@
       </p>
       <p class="content">
 	<b>LED:</b>
-	I had two possibilities for LED selection: a smaller unit that would draw about 70 Watts and a monster array drawing 140. Both of the arrays were powerful enough to require a heatsink, and they had ratings for maximum thermal resistance. Unfortunately, cheap CPU heatsinks don't come with datasheets, so I had to buy a (way too expensive) heatsink from Digikey. The heatsink is basically a quarter inch of copper with fins. I machined mounting holes for the LED, then used Artic Silver CPU thermal compound as the thermal interface material.
+	I had two possibilities for LED selection: a smaller unit that would draw about 70 Watts and a monster array drawing 140. Both of the arrays were powerful enough to require a heatsink, and they had ratings for maximum thermal resistance. Unfortunately, cheap CPU heatsinks don't come with datasheets, so I had to buy a (way too expensive) heatsink from Digikey. The heatsink is basically a quarter inch of copper with fins. I machined mounting holes for the LED, then used Arctic Silver CPU thermal compound as the thermal interface material.
       </p>
       <div class="image_box">
 	<img src="Arc_reactor_milling.jpg" alt="Milling the LED mounting plate" width="350"/>
@@ -137,7 +146,7 @@
 	An improvement was engineered.
       </p>
       <p class="content">
-	The new design used a 'Wolo Model 330 Oooga Sound Fun 12 Volt Horn' found on Amazon. It has an output of 114 dB. For reference, <a href="http://en.wikipedia.org/wiki/Sound_pressure#Examples_of_sound_pressure">here's</a> Wikipedia's  table of sound pressure to real life examples. Power for the horn is switched with a MOSFET, which is in turn controlled by an Arduino Pro Mini. The Arduino is connected to a Rasberry Pi via a 434 MHz, 300 Baud serial RX-TX pair. 
+	The new design used a 'Wolo Model 330 Oooga Sound Fun 12 Volt Horn' found on Amazon. It has an output of 114 dB. For reference, <a href="http://en.wikipedia.org/wiki/Sound_pressure#Examples_of_sound_pressure">here's</a> Wikipedia's  table of sound pressure to real life examples. Power for the horn is switched with a MOSFET, which is in turn controlled by an Arduino Pro Mini. The Arduino is connected to a Raspberry Pi via a 434 MHz, 300 Baud serial RX-TX pair. 
       </p>
       <div class="image_box">
 	<img src="horn.jpg" alt="Wolo Model 330 Oooga Sound Fun 12 Volt Horn" width="250"/>
@@ -164,13 +173,13 @@
 	<p class="caption">One of the woofers sitting on my desk in the robotics lab</p>
       </div>
       <p class="content">
-	Along with the cones, the brother also sold me an amplifier, but I had no way to power the system, and no cabinet for the subs. There is one obvious choice when you need a lot of low ripple power at 12v: a computer power supply! I used a Corsiar TX850, which has a full load efficiency of 83.88% (yeah, it actually has a <a href="tx850.png">datasheet</a>!) and rated continuous power of 850 Watts, which means that I'm pulling about 1kW from the wall at full load.
+	Along with the cones, the brother also sold me an amplifier, but I had no way to power the system, and no cabinet for the subs. There is one obvious choice when you need a lot of low ripple power at 12v: a computer power supply! I used a Corsair TX850, which has a full load efficiency of 83.88% (yeah, it actually has a <a href="tx850.png">datasheet</a>!) and rated continuous power of 850 Watts, which means that I'm pulling about 1kW from the wall at full load.
       </p>
       <p class="content">
 	1kW is enough to dim the lights in the room as the bass kicks, so I decided to put in a 2 Farad capacitor on the 12v rails (this is a surprisingly common addition to car audio it seems, the cap was way cheaper than I thought a massive capacitor would be). Unfortunately, it looks like few other bass music enthusiasts care about datasheets for their boomer caps, so I have no real engineering data on the capacitor. From observing the time it takes to reach 5RC, it seems like the capacitance is a bit below rating. In any event, you can't just wire in a 2F cap to the output of the supply, flip on the supply and expect any of your equipment not to make magic smoke. 
       </p>
       <p class="content">
-	The real engineering of the project came in designing a capacitor charge circuit. The design is pretty simple, a power resistor in parallel with a bank of MOSFETS, but it was very <i>custom</i> fabrication. I didn't want to wait for shipping on a power resistor, so I wound one out of some nickel-chromium alloy wire we had in the robotics lab, then slid the windings into a pyrex test tube that I had ground the end off. It's effective, but it looks exactly like something you'd see on a mad scientist's table. To finish it all off, I have an awesome double switch panel, one to start the power supply, and one to bypass the power resistor. So far I haven't switched the order and blown up the FETs.
+	The real engineering of the project came in designing a capacitor charge circuit. The design is pretty simple, a power resistor in parallel with a bank of MOSFETS, but it was very <i>custom</i> fabrication. I didn't want to wait for shipping on a power resistor, so I wound one out of some nickel-chromium alloy wire we had in the robotics lab, then slid the windings into a Pyrex test tube that I had ground the end off. It's effective, but it looks exactly like something you'd see on a mad scientist's table. To finish it all off, I have an awesome double switch panel, one to start the power supply, and one to bypass the power resistor. So far I haven't switched the order and blown up the FETs.
       </p>
       <p class="content">
 	To make an a cabinet for the subs, I used the Idea Shop on campus, which is like a university run hackerspace except with more rules. They CNC routed some 3/4" MDF for the enclosure. Lucky for me, the datasheet on the subs had specific dimensions for a cabinet, so I didn't have to do any acoustic design work.
