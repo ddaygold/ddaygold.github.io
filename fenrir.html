@@ -1,69 +1,86 @@
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <head>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-		<title>PROJECTS | FENRIR REBUILD</title>
-		<link href="http://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
-		<script src="http://vjs.zencdn.net/4.11/video.js"></script>
-		<style type="text/css">
-  .vjs-default-skin { color: #ffffff; }
-		</style>
+    <title>PROJECTS | FENRIR REBUILD</title>
+    <link href="http://vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.11/video.js"></script>
+    <style type="text/css">
+      .vjs-default-skin { color: #ffffff; }
+    </style>
 
-	</head>
-	<body>
-		<div class="header">
-			<h1 >
-				PROJECTS
-			</h1>
-		</div>
-		<div class="sitenav">
-			<a class="sitenav" href="index.html">About</a> | 
-			<a class="sitenav" href="projects.html">Projects</a> | 
-			<a class="sitenav" href="classes.html">Classes</a> |
-			<a class="sitenav" href="https://github.com/ddaygold/documents/blob/master/resume/resume.pdf?raw=true">Resume</a>
-			<hr>
-		</div>
-		<div class="content">
-			<h2 class="proj_section">Fenrir Rebuild</h2>
-			<p class="content">
-			  Since Fenrir was the first robot I worked on (and eventually the first project I led), it holds a special place in my heart. After working on it for a season and working out most of the mechanical problems, I was still unhappy with the state of the robot. Basically, it didn't drive straight!
-			</p>
-			<h3 class="proj_header">Historical Design</h3>
-			<p class="content">
-			  The concept and inital implementation of Fenrir happened before I came to IIT. It was essentially a project built just to be different. The design is not particularly advantageous for the competion it was obstensibly built for. As power is applied to the drive motors, the whole frame rotates, which makes any manipulator mounted on it very challenging to stay aligned.
-			</p>
-			<p class="content">
-			  Still, a moving reference frame is not a death knell for robots. With proper sensors, feedback and controls, you could "subtract" out the rotating frame to keep your manipulator level. All you would need is feedback. Which Fenrir had none of. 
-			</p>
-			<p class="content">
-			  Fenrir was entirely "Open loop." Propulsion was just telling the motor controllers to send some amount of power to the wheels. Inevitably, this causes one driveline to spin slightly differently than the other, and the robot to veer slightly (or sharply, depending on how different the drivelines were) left or right.
-			</p>
-			<p class="content">
-			  Fenrir's other problem was that the axles were held in by clip rings. A diagram is below:
-			</p>
-			<div class="image_box">
-				<img src="fenrir_axle_diagram.png" alt="Fenrir's axle" />
-				<p class="caption">Fenrir's Axle</p>
-			</div>
-			<p class="content">
-			  In the diagram, the axle is the light grey. Into the body of the robot is to the left, and wheel is mounted on the larger stepped diameter. The blue box is the block that restrains the shaft from moving axially into the robot. The yellow box is a thrust bearing (later a delrin bushing after the bearings got eaten. The black box is a normal bearing, able to bear radial loads. The darker grey box is an angular contact bearing, resisting radial and the axial forces that would pull the shaft out of the robot. However, the axial force is transmitted to the angular contact bearing entirely through a single clip ring (red)!
-			</p>
-			<p class="content">
-			  This clip ring would fail, the axle would unsteat from the thrust bearing and the radial bearing, and the shaft would slip the chain, crippling the robot. At first, it was thought that the clip ring slots were just poorly machined into the shaft, but even with new shafts machined, the problem still occurred. 
-			</p>
-			<p class="content">
-			  Therefore, my first senior year improvement to Fenrir was to replace that clip ring with a screw in shaft collar. It was created by boring some black steel pipe to the correct internal diameter, then drilling and threading 1/4-20 holes. A photo is below.
-			</p>
-			<div class="image_box">
-			  <a href="fenrir_shaft_collar.JPG">
-				<img src="fenrir_shaft_collar_small.JPG" alt="Fenrir's Shaft Collars" width="350"/>
-				</a>
-				<p class="caption">Fenrir's New Shaft Collars</p>
-			</div>
-		</div>
-
-	</body>
+  </head>
+  <body>
+    <div class="header">
+      <h1 >
+	PROJECTS
+      </h1>
+    </div>
+    <div class="sitenav">
+      <a class="sitenav" href="index.html">About</a> | 
+      <a class="sitenav" href="projects.html">Projects</a> | 
+      <a class="sitenav" href="classes.html">Classes</a> |
+      <a class="sitenav" href="https://github.com/ddaygold/documents/blob/master/resume/resume.pdf?raw=true">Resume</a>
+      <hr>
+    </div>
+    <div class="content">
+      <h2 class="proj_section">Fenrir Rebuild</h2>
+      <p class="content">
+	Since Fenrir was the first robot I worked on (and eventually the first project I led), it holds a special place in my heart. After working on it for a season and working out most of the mechanical problems, I was still unhappy with the state of the robot. Basically, it didn't drive straight!
+      </p>
+      <h3 class="proj_header">Historical Design</h3>
+      <p class="content">
+	The concept and inital implementation of Fenrir happened before I came to IIT. It was essentially a project built just to be different. The design is not particularly advantageous for the competion it was obstensibly built for. As power is applied to the drive motors, the whole frame rotates, which makes any manipulator mounted on it very challenging to stay aligned.
+      </p>
+      <p class="content">
+	Still, a moving reference frame is not a death knell for robots. With proper sensors, feedback and controls, you could "subtract" out the rotating frame to keep your manipulator level. All you would need is feedback. Which Fenrir had none of. 
+      </p>
+      <p class="content">
+	Fenrir was entirely "Open loop." Propulsion was just telling the motor controllers to send some amount of power to the wheels. Inevitably, this causes one driveline to spin slightly differently than the other, and the robot to veer slightly (or sharply, depending on how different the drivelines were) left or right.
+      </p>
+      <p class="content">
+	Fenrir's other problem was that the axles were held in by clip rings. A diagram is below:
+      </p>
+      <div class="image_box">
+	<img src="fenrir_axle_diagram.png" alt="Fenrir's axle" />
+	<p class="caption">Fenrir's Axle</p>
+      </div>
+      <p class="content">
+	In the diagram, the axle is the light grey. Into the body of the robot is to the left, and wheel is mounted on the larger stepped diameter. The blue box is the block that restrains the shaft from moving axially into the robot. The yellow box is a thrust bearing (later a delrin bushing after the bearings got eaten. The black box is a normal bearing, able to bear radial loads. The darker grey box is an angular contact bearing, resisting radial and the axial forces that would pull the shaft out of the robot. However, the axial force is transmitted to the angular contact bearing entirely through a single clip ring (red)!
+      </p>
+      <p class="content">
+	This clip ring would fail, the axle would unsteat from the thrust bearing and the radial bearing, and the shaft would slip the chain, crippling the robot. At first, it was thought that the clip ring slots were just poorly machined into the shaft, but even with new shafts machined, the problem still occurred. 
+      </p>
+      <p class="content">
+	Therefore, my first senior year improvement to Fenrir was to replace that clip ring with a screw in shaft collar. It was created by boring some black steel pipe to the correct internal diameter, then drilling and threading 1/4-20 holes. A photo is below.
+      </p>
+      <div class="image_box">
+	<a href="fenrir_shaft_collar.JPG">
+	  <img src="fenrir_shaft_collar_small.JPG" alt="Fenrir's Shaft Collars" width="350"/>
+	</a>
+	<p class="caption">Fenrir's New Shaft Collars</p>
+      </div>
+      <p class="content">
+	The second, more involved, fix was completely rebuilding Fenrir's electrical and control systems. In the year I was not involved with the project, the new caretakers had ripped out or trashed all of the electronics work I had done, so I stripped out all the wiring and started fresh.
+      </p>
+      <p class="content">
+	The target of the rebuild was to introduce speed feedback and control. This was done by creating what I termed "speed servos," independent controllers on each wheel connected to the motor controllers with feedback through quadrature encoders. Communication to the controllers is through i2c, and accepts inputs for the P, I, and D terms for the controller, and of course the target speed. In order to tune the controller, recorded speed can be returned from the contoller. The controller P, I and D tunings are saved and loaded from EEPROM. The code for the speedservos can be found <a href="https://github.com/ddaygold/speed_servo">on GitHub</a>. 
+      </p>
+      <p class="content">
+	One of the other members of the team decided that he wanted to use C to control the robots, instead of the Java controller code we were using before. That <a href="https://github.com/illinoistechrobotics/serialctl">code is also on GitHub</a>. Significant work was done cosmetically and on the robot side to adapt it to controlling Fenrir. Those changes can be found on the <a href="https://github.com/illinoistechrobotics/serialctl/tree/fenrir">Fenrir branch</a>. The most obvious modification is that the code now has a pretty ncurses front end!
+      <div class="image_box">
+	<a href="serialctl_ncurses.png">
+	  <img src="serialctl_ncurses_small.png" width="350"/>
+	</a>
+	<p class="caption">Oooh, ncurses!</p>
+      </div>
+      <h2 class="proj_section">Results</h2>
+      <div class="image_box">
+<embed type="application/x-shockwave-flash" src="https://photos.gstatic.com/media/slideshow.swf" width="600" height="400" flashvars="host=picasaweb.google.com&hl=en_US&feat=flashalbum&RGB=0x000000&feed=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fapi%2Fuser%2F103019821355154105874%2Falbumid%2F6127862537124967265%3Falt%3Drss%26kind%3Dphoto%26authkey%3DGv1sRgCJnojrDntuGdWg%26hl%3Den_US" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>
+      </div>
+    </div>
+  </body>
 </html>
